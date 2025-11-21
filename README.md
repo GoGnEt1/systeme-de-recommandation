@@ -7,34 +7,43 @@ Mini-projet de machine learning utilisant TF-IDF et la Similarité Cosinus pour 
 ### Objectifs :
 
 • Prétraitement du texte
+
 • Vectorisation TF-IDF
+
 • Calcul de similarité cosinus
+
 • Recommandation automatisée
+
 • implémentation Scikit-Learn
+
 • Comprehension du Content-Based Filtering
 
 ### Bibliothèques utilisées :
 
 **Python** : Environnent général du projet.
-**Pandas** : permet de manipuler (charger, créer un DataFrame, filtrer, nettoyage, ..) des données tabulaires
+
+**Pandas** : permet de manipuler (charger, créer un DataFrame, filtrer, nettoyage, ..) des données tabulaires.
+
 **Scikit-Learn** :
+
 _• TfidfVectorizer_ : transforme du texte en vecteurs numériques basés sur TF-IDF où chaque dimension représente un mot important.
 
 ```bat
-  → *TF : Term Frequency (fréquence du mot) = (nbre totat du terme présent dans le doc) / (somme des mots du doc)*
-  → *IDF : Iverse Document Frequency (fréquence inverse du doc) = log((nbre totat de docs) / (nbre de docs contenant le terme))*
+  TF : Term Frequency (fréquence du mot) = (nbre totat du terme présent dans le doc) / (somme des mots du doc)
+
+  IDF : Iverse Document Frequency (fréquence inverse du doc) = log((nbre totat de docs) / (nbre de docs contenant le terme))
 ```
 
 _• cosine_similarity_ : calcule la similarité entre vecteurs (tous les couples de produits ) à l'aide du cosinus. C'est la mésure la plus utilisée en NPL pour les moteur de recommandation.
 
-Formule mathématiques :
+#### Formule mathématiques :
 
 ```bat
- **cosine_similarity(A, B) = (produit sacalaire de A et B) / (le produit de la norme ecludienne de A et de B)**
+ cosine_similarity(A, B) = (produit sacalaire de A et B) / (le produit de la norme ecludienne de A et de B)
 
- **Interprétation** :
+ Interprétation :
  • si angle = 0° → score = 1 → textes identiques
- • si angle = 60° →score = 0.5 → textes moyennement proches
+ • si angle = 60° → score = 0.5 → textes moyennement proches
  • si angle = 90° → score = 0 → pas de relation
 ```
 
